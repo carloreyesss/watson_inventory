@@ -3,9 +3,6 @@ require_once realpath(__DIR__ . '/vendor/autoload.php');
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
 /**
  * Read and get the list of SKUs on the CSV file
  * 
