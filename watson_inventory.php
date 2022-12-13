@@ -31,7 +31,7 @@ if(!file_exists($argv[1])){
 
   fclose($file);
 
-  getDataAndConvertDownloadCsv();
+  getDataAndConvertDownloadCsv($postData, $argv[1]);
 }
 
 /**
@@ -39,7 +39,7 @@ if(!file_exists($argv[1])){
  * 
  * @return null
  */
- function getDataAndConvertDownloadCsv()
+ function getDataAndConvertDownloadCsv($postData, $filePath)
  {
   $curl = curl_init();
 
@@ -89,7 +89,7 @@ if(!file_exists($argv[1])){
 
   // Convert to CSV and download
   $jsonDecoded = json_decode($jsonData, true);
-  $csv = date('Ymd') . '-' . $argv[1];
+  $csv = date('Ymd') . '-' . $filePath;
     
   $file_pointer = fopen($csv, 'w');
     
