@@ -1,0 +1,5 @@
+Go to the project folder -> open command line and run this command
+
+php watson_inventory.php file1.csv
+
+- "file1.csv" contains the list of SKU
